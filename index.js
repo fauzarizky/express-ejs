@@ -5,7 +5,7 @@ const tagsData = require("./data.json");
 const app = express();
 const PORT = process.env.PORT || 9001;
 
-app.use(express.json());
+// set view engine, where the template engine is stored & static folder
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views")); // to set path to views folder
 app.use(express.static(path.join(__dirname, "/public")));

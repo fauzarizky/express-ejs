@@ -1,15 +1,17 @@
 <%- include('partials/header') %>
     <%- include('partials/navbar') %>
-        <h1>Random Number: <%= num %>
-        </h1>
+        <div class="container-fluid">
+            <h1>Random Number: <%= num %>
+            </h1>
 
-        <% if (num % 2===0) { %>
-            <h3>Even Number</h3>
-            <% } else { %>
-                <h3>Odd Number</h3>
-                <% } %>
+            <% if (num % 2===0) { %>
+                <h3>Even Number</h3>
+                <% } else { %>
+                    <h3>Odd Number</h3>
+                    <% } %>
 
-                    <!-- Ternary Operator version -->
-                    <h3>That number is <%= num % 2===0 ? 'Even' : "Odd" %>
-                    </h3>
-                    <%- include('partials/footer') %>
+                        <!-- Ternary Operator version -->
+                        <h5 class="fst-italic">That number is <%= num % 2===0 ? 'Even' : "Odd" %>
+                        </h5>
+        </div>
+        <%- include('partials/footer') %>

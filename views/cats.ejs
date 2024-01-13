@@ -1,11 +1,19 @@
 <%- include('partials/header') %>
     <%- include('partials/navbar') %>
-        <h1>Cats</h1>
-        <ul>
-            <% for (const cat of cats) { %>
-                <li>
-                    <%= cat %>
-                </li>
-                <% } %>
-        </ul>
+        <div class="container d-flex justify-content-center align-items-center" style="min-height: 90vh;">
+            <div class="w-100">
+                <h1>List of cats</h1>
+                <ul class="list-unstyled">
+                    <% for (const cat of cats) { %>
+                        <li>
+                            <div class="card mt-2">
+                                <div class="card-body">
+                                    <%= cat %>
+                                </div>
+                            </div>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+        </div>
         <%- include('partials/footer') %>
